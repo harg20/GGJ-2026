@@ -43,8 +43,8 @@ func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 
 
 	# max horizontal speed
-	var dir: float = sign(velocity.x)
-	var speed: float = abs(velocity.x)
+	var dir := signf(velocity.x)
+	var speed := absf(velocity.x)
 	velocity.x = min(speed, max_horizontal_speed) * dir
 
 	# only gravity for now, don't need dir yet
